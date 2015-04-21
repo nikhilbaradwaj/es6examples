@@ -44,6 +44,8 @@ Nikhil Baradwaj
 
 ## License
 
+![](https://img.shields.io/badge/License-MIT-303030.svg?style=flat-square)
+
 [The MIT License](http://opensource.org/licenses/MIT)
 
 **Copyright (c) 2015 Nikhil Baradwaj**
