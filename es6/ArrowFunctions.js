@@ -63,15 +63,25 @@ function Person() {
 }
 
 //Arrow function cannot be a constructor
-Animal = (name, age) => {
-    this.age = age;
-    this.name = name;
+let Animal = (name, age) => {
+    try {
+        this.age = age; //Typeerror: 'undefined' is not an object. We cannot reference a property of 'this' here.
+        this.name = name;
+    }
+    catch(e) {
+
+    }
 };
 if (Animal.prototype) {
     Animal.prototype.getName = () => this.name;  //Animal.prototype is undefined
 }
 
-var a = new Animal(); // TypeError: func is not a constructor
+try {
+    var a = new Animal(); // TypeError: func is not a constructor
+} catch (e) {
+
+}
+
 
 //Arrows cannot be generators. 'yield' may not be used in an arrow function's body.
 

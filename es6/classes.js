@@ -5,7 +5,7 @@ function doSomething() {   //Private function
     console.log("Do Something");
 }
 
-class Polygon { //syntactic sugar for prototype inheritance using ES6 Class
+export class Polygon { //syntactic sugar for prototype inheritance using ES6 Class
 
     static draw() {  //public static function
         console.log("Draws is the shape of the Polygon");
@@ -25,7 +25,7 @@ class Polygon { //syntactic sugar for prototype inheritance using ES6 Class
 
 }
 
-class square extends Polygon {  //inheritance with ES6 extends
+export class square extends Polygon {  //inheritance with ES6 extends
     area() {  //new public function for derived class
         return Math.pow(privateData.get(this).sideLength, 2);
     }
