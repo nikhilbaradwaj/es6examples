@@ -1,5 +1,6 @@
 # es6examples
 
+[![Build Status](https://travis-ci.org/nikhilbaradwaj/es6examples.svg?branch=master)](https://travis-ci.org/nikhilbaradwaj/es6examples)
 [![Join the chat at https://gitter.im/nikhilbaradwaj/es6examples](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nikhilbaradwaj/es6examples?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ![ES6 Logo](es6.png)
