@@ -1,18 +1,29 @@
 "use strict";
 
-function doAsyncOperation(maxTimout, otherParams) {
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.doAsyncOperation = doAsyncOperation;
+exports.fetchDataWithWrongJSONFormat = fetchDataWithWrongJSONFormat;
+
+var asyncTime = 200;
+
+function doAsyncOperation(maxTimout) {
     return new Promise(function (resolve, reject) {
         setTimeout(function () {
             // do the actual async operation
-            resolve();
-        }, 2000);
+            resolve(asyncTime); //success
+        }, asyncTime);
         setTimeout(function () {
-            // do the actual async operation
-            reject();
+            reject(maxTimout); //failure. promise is not canceled. however it cannot be fulfilled.
         }, maxTimout);
     });
 }
 
-doAsyncOperation(1000, {}).then(console.log("Successful after 2 s!"))["catch"](console.log("Timeout after 1 s"));
-
-doAsyncOperation(3000, {}).then(console.log("Successful after 2 s!"))["catch"](console.log("Timeout after 3 s"));
+function fetchDataWithWrongJSONFormat() {
+    return new Promise(function (resolve) {
+        setTimeout(function () {
+            resolve("<div>foo</div>"); //return incorrect JSON format.
+        }, 5);
+    });
+}

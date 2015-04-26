@@ -1,13 +1,28 @@
 "use strict";
-function doAsyncOperation(maxTimout, otherParams) {
+var asyncTime = 200;
+function doAsyncOperation(maxTimout) {
   return new Promise(function(resolve, reject) {
     setTimeout(function() {
-      resolve();
-    }, 2000);
+      resolve(asyncTime);
+    }, asyncTime);
     setTimeout(function() {
-      reject();
+      reject(maxTimout);
     }, maxTimout);
   });
 }
-doAsyncOperation(1000, {}).then(console.log("Successful after 2 s!")).catch(console.log("Timeout after 1 s"));
-doAsyncOperation(3000, {}).then(console.log("Successful after 2 s!")).catch(console.log("Timeout after 3 s"));
+function fetchDataWithWrongJSONFormat() {
+  return new Promise(function(resolve) {
+    setTimeout(function() {
+      resolve("<div>foo</div>");
+    }, 5);
+  });
+}
+Object.defineProperties(module.exports, {
+  doAsyncOperation: {get: function() {
+      return doAsyncOperation;
+    }},
+  fetchDataWithWrongJSONFormat: {get: function() {
+      return fetchDataWithWrongJSONFormat;
+    }},
+  __esModule: {value: true}
+});
