@@ -61,15 +61,19 @@ module.exports = function() {
       return $__1.age++;
     }), 1000);
   }
-  Animal = (function(name, age) {
-    $__0.age = age;
-    $__0.name = name;
+  var Animal = (function(name, age) {
+    try {
+      $__0.age = age;
+      $__0.name = name;
+    } catch (e) {}
   });
   if (Animal.prototype) {
     Animal.prototype.getName = (function() {
       return $__0.name;
     });
   }
-  var a = new Animal();
+  try {
+    var a = new Animal();
+  } catch (e) {}
   return {};
 }.call(Reflect.global);

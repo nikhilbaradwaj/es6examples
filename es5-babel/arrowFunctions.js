@@ -113,9 +113,11 @@ function Person() {
 }
 
 //Arrow function cannot be a constructor
-Animal = function (name, age) {
-    undefined.age = age;
-    undefined.name = name;
+var Animal = function Animal(name, age) {
+    try {
+        undefined.age = age; //Typeerror: 'undefined' is not an object. We cannot reference a property of 'this' here.
+        undefined.name = name;
+    } catch (e) {}
 };
 if (Animal.prototype) {
     Animal.prototype.getName = function () {
@@ -123,6 +125,8 @@ if (Animal.prototype) {
     }; //Animal.prototype is undefined
 }
 
-var a = new Animal(); // TypeError: func is not a constructor
+try {
+    var a = new Animal(); // TypeError: func is not a constructor
+} catch (e) {}
 
 //Arrows cannot be generators. 'yield' may not be used in an arrow function's body.

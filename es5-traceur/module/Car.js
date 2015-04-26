@@ -1,6 +1,6 @@
 "use strict";
-var $__vehicle__;
-var Vehicle = ($__vehicle__ = require("vehicle"), $__vehicle__ && $__vehicle__.__esModule && $__vehicle__ || {default: $__vehicle__}).Vehicle;
+var $__Vehicle__;
+var Vehicle = ($__Vehicle__ = require("./Vehicle"), $__Vehicle__ && $__Vehicle__.__esModule && $__Vehicle__ || {default: $__Vehicle__}).Vehicle;
 var Car = (function($__super) {
   function Car(engine, year) {
     $traceurRuntime.superConstructor(Car).call(this, engine, year, 4);

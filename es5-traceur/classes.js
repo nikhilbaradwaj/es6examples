@@ -32,3 +32,12 @@ var square = (function($__super) {
     }
   }, {}, $__super);
 }(Polygon));
+Object.defineProperties(module.exports, {
+  Polygon: {get: function() {
+      return Polygon;
+    }},
+  square: {get: function() {
+      return square;
+    }},
+  __esModule: {value: true}
+});

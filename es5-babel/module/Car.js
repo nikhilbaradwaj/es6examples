@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
-var _Vehicle2 = require("vehicle");
+var _Vehicle2 = require("./Vehicle");
 
 //imports the vehicle class to use it in this module
 
