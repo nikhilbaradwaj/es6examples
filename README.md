@@ -5,7 +5,6 @@
 
 ![ES6 Logo](es6.png)
 
----
 
 > **Marty McFly:** Wait a minute. Wait a minute, Doc. Ah... Are you telling me that you built a time machine... out of a DeLorean?
 
@@ -13,13 +12,14 @@
 
 > **"Back to the Future"**
 
----
 
 ## Overview
 
 This repository is a bunch of code examples to explore the latest and greatest in *ecmascript 6* and beyond.
 
-The gulp setup here will let you write the future of javascript today.
+The gulp setup here will let you write the future of javascript today. The code is transpiled to ES5 for use in current browsers.
+
+The gulp setup also lets you test the ES6 code using karma and jasmine. In fact, the test cases can also be written in ES6.
 
 The goal is to cover all new features that are introduced in es6 and to check their es5 equivalents using [babel](https://babeljs.io/) and [traceur](https://github.com/google/traceur-compiler/blob/master/README.md) transpilers.
 
@@ -46,8 +46,6 @@ respective transpiled code to es5 by the two popular transpilers.
 Nikhil Baradwaj
 
 ## License
-
-![](https://img.shields.io/badge/License-MIT-303030.svg?style=flat-square)
 
 [The MIT License](http://opensource.org/licenses/MIT)
 
